@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+    {% block title %} SignUp Form {% endblock %}
+
+{% block body_block %}
+<h1>Welcome to model forms demo</h1><br>
+<form method="post">
+    {% csrf_token %}
+    {{authorform.as_p}}
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
